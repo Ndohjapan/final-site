@@ -104,6 +104,8 @@ body section {
   overflow: hidden;
   height: 40px;
   line-height: 36px;
+  color: black;
+  font-weight: bold;
 }
 .drop .drop-display .item .btnclose {
   color: #444;

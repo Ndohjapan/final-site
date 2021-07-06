@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Demo | MoveTo.js</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./demo.css">
+
+  <script src="./dist/moveTo.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const easeFunctions = {
+        easeInQuad: function (t, b, c, d) {
+          t /= d;
+          return c * t * t + b;
+        },
+        easeOutQuad: function (t, b, c, d) {
+          t /= d;
+          return -c * t* (t - 2) + b;
+        }
+      }
+      const moveTo = new MoveTo({
+        ease: 'easeInQuad'
+      }, easeFunctions);
+      const triggers = document.getElementsByClassName('js-trigger');
+      for (var i = 0; i < triggers.length; i++) {
+        moveTo.registerTrigger(triggers[i]);
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div id="section-1" class="c-section c-section--primary d-flex flex-column justify-content-center align-items-center">
+  <h1 class="display-3">MoveTo</h1>
+  <p class="lead mb-2">A lightweight scroll animation javascript library without any dependency.</p>
+  <a class="c-section__link mb-4" href="https://github.com/hsnaydd/moveTo">Documentation on GitHub</a>
+  <a href="#section-3" class="btn btn-lg c-section__btn js-trigger">Lets try!</a>
+</div>
+<div id="section-2" class="c-section c-section--secondary d-flex flex-column align-items-center">
+  <div class="u-flex-extend d-flex align-items-center">
+    <button data-target="#" class="btn btn-primary btn-lg c-section__btn js-trigger" data-mt-duration="300" data-mt-easing="easeOutQuad">Back to Top!</button>
+  </div>
+  <div class="c-section__footer p-2">
+    Made with <svg class="align-middle" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 384"><path fill="#c92a2a" d="M224 384c-4 0-8-1.5-11-4.5L57 229c-2-1.75-57-52-57-112C0 43.75 44.75 0 119.5 0c43.75 0 84.75 34.5 104.5 54 19.75-19.5 60.75-54 104.5-54C403.25 0 448 43.75 448 117c0 60-55 110.25-57.25 112.5L235 379.5c-3 3-7 4.5-11 4.5z"/></svg> by <a href="https://twitter.com/hsnaydd" class="c-section__link">@hsnaydd</a>
+  </div>
+</div>
+
+<div id="section-3" style="margin: 20rem auto; padding: 20rem">
+  <h1>Hello World</h1>
+</div>
+
+
+</body>
+</html>

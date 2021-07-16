@@ -423,7 +423,7 @@ ol > a{
 
 .projects-card-buttons{
     position: absolute;
-    left: 29%;
+    left: 30%;
     bottom: 42%;
     transform: translateY(-200%);
     opacity: 0;

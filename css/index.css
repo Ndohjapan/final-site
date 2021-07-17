@@ -15,6 +15,13 @@
     --secondary-color-1: #00fdf0;
     --secondary-color-contrast-1: #3fdfcd;
     --secondary-color-contrast-2: #0099ce;
+    --whatsapp-color-1: #25D366;
+    --whatsapp-color-2: #075E54;
+    --facebook-color-1: #006AFF;
+    --twitter-color-1: #1DA1F2 ;
+    --youtube-color-1: 	#FF0000;
+    --instagram-color-1: #E1306C;
+    --footer-icon-color: #33383b;
 }
 
 *{
@@ -34,6 +41,11 @@
 
 .pl-center{
     place-content: center;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 li{
@@ -150,7 +162,7 @@ body{
     text-decoration: none;
 }
 
-.navbar-option-link::before{
+.navbar-option-link:not(.dropdown ul a li)::before{
     content: "";
     width: 100%;
     height: .2rem;
@@ -162,16 +174,66 @@ body{
     transform: scaleX(0);
     transform-origin: right;
 }
-.navbar-options li:hover a::before{
+.navbar-options .top-nav:hover a::before{
     content: "";
     width: 100%;
     height: .2rem;
-    background: var(--secondary-color-1);
     bottom: 0; 
     left: 0;
     position: absolute;  
     transform: scaleX(1);
     transform-origin: left; 
+}
+
+.dropdown{
+    visibility: hidden;
+    opacity: 0;
+    top: 100%;
+    position: absolute;
+    text-align: left;
+    border-top: 2px solid #007bff;
+    -webkit-box-shadow: 0 2px 10px -2px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 10px -2px rgb(0 0 0 / 10%);
+    padding: 0px 0;
+    margin-left: 0px;
+    background: var(--primary-color-2);
+    -webkit-transition: 0.2s 0s;
+    -o-transition: 0.2s 0s;
+    transition: 0.2s 0s;
+}
+
+.dropdown li{
+    list-style: none;
+    padding: 9px 20px;
+    margin: 0;
+    min-width: 240px;
+    text-align: left;
+}
+
+.dropdown li:hover{
+    background: var(--primary-color-3)
+}
+
+.dropdown li a {
+    display: block;
+    text-decoration: none;
+}
+
+.dropdow li a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown li a::before{
+    content: "";
+    width: 0;
+    height: 0;
+
+}
+
+.visible{
+    visibility: initial;
+    opacity: 1;
 }
 
 .terminal-stackr-mobile-menu{
@@ -322,6 +384,15 @@ ol > a{
     place-content: center;
 }
 
+.about-cta-button{
+    margin: 2rem auto;
+}
+
+.about-cta-button:hover{
+    color: black;
+    font-weight: bolder;
+}
+
 .any-section-header h2{
     text-align: center;
     margin-bottom: 2rem;
@@ -403,7 +474,7 @@ ol > a{
     display: grid;
     grid-gap: 1.5rem;
     flex-basis: calc(33% - 20px);
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .terminal-stackr-services-card-image{
@@ -411,7 +482,7 @@ ol > a{
     place-content: center;
 }
 
-.terminal-stackr-services-card-image img{
+.terminal-stackr-services-card-image img, .services-images{
     width: 5rem;
 }
 
@@ -628,6 +699,38 @@ ol > a{
         background-color: var(--secondary-color-1);
       }
 
+
+/* Our Team Info */
+.terminal-stackr-team-info{
+    margin: 4rem auto 0;
+    width: 90%;
+    place-content: center;
+    z-index: 1;
+}
+
+.whatsapp-number, .send-to-contact-page{
+    font-size: 1.5rem;
+    background-color: var(--whatsapp-color-1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    width: 100%;
+
+}
+
+.whatsapp-number i, .send-to-contact-page i{
+    font-size: 1.7rem;
+}
+
+.cta-container{
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: space-around;
+}
+
+.cta-container >*:hover{
+    background: var(--whatsapp-color-2);
+}
+
 /* Contact Us Section */
 
 .terminal-stackr-contact-section{
@@ -654,7 +757,7 @@ ol > a{
     color: white;
 }
 
-button.send-message {
+.send-message {
     border: none;
     width: 50%;
     margin: auto;
@@ -680,7 +783,7 @@ button.send-message {
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
  }
-    button.send-message:before {
+    .send-message:before {
       content: "";
       position: absolute;
       z-index: -1;
@@ -700,17 +803,17 @@ button.send-message {
       transition-duration: 0.5s;
       -webkit-transition-timing-function: ease-out;
       transition-timing-function: ease-out; }
-    button.send-message:hover:before {
+    .send-message:hover:before {
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
       -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
       transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
         
-    button.send-message:focus, .terminal-stackr-contact-us-message{
+    .send-message:focus, .terminal-stackr-contact-us-message{
         outline: none;
     }
 
-    button.send-message:hover{
+    .send-message:hover{
         color: #000;
     }
 
@@ -735,6 +838,9 @@ button.send-message {
         background-image: radial-gradient(rgba(0,0,0, 1), rgb(43 40 58 / 44%), rgb(0 0 0 / 11%));
         box-shadow: 2px 3px 7px #2c293a87, inset 2px -5px 7px rgb(51 47 65 / 31%);
     }
+
+
+
 
 /* Footer Styling */
 .white-logo{

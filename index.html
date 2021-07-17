@@ -14,9 +14,10 @@
     <!-- owl carousel-->
     <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
-    <!-- Wow stylesheet -->
     <!-- AOS stylesheet -->
     <link rel="stylesheet" href="./vendor/aos/aos.css">
+    <!-- Flip Card Animation -->
+    <link rel="stylesheet" href="./css/flipcard.css">
     <!-- Multi Select stylesheet -->
     <link rel="stylesheet" href="./vendor/multiselect-master/css/multi-select.css">
     <!-- International Phone Number -->
@@ -50,12 +51,12 @@
           <div class="container">
             <div class="row d-flex">
               <div class="col-md-8 d-md-block d-none">
-                <p>Contact: <a href="tel:+2349075152756"> 09075152756</a> or <a href="mailto:mail@terminalstackr.com"> mail@terminalstackr.com</a> </p>
+                <p>Contact: <a href="tel:+2349056144059"> 09056144059</a> or <a href="mailto:mail@terminalstackr.com"> mail@terminalstackr.com</a> </p>
               </div>
               <div class="col-md-4">
                 <div class="d-flex justify-content-md-end justify-content-between">
                   <ul class="list-inline contact-info d-block d-md-none">
-                    <li class="list-inline-item"><a href="tel:09075152756"><i class="fa fa-phone"></i></a></li>
+                    <li class="list-inline-item"><a href="tel:09056144059"><i class="fa fa-phone"></i></a></li>
                     <li class="list-inline-item"><a href="mailto:"><i class="fa fa-envelope"></i></a></li>
                   </ul>
                   <ul class="social-custom list-inline">
@@ -78,19 +79,26 @@
         </div>
         <div class="terminal-stackr-nav-options show-desktop col-8">
             <ul class="navbar-options">
-                <li id="navbar-option-1">
+                <li id="navbar-option-1" class="top-nav">
                     <a href="#" class="js-trigger navbar-option-link">Home</a>
                 </li>
-                <li id="navbar-option-2">
+                <li id="navbar-option-2" class="top-nav">
                     <a href="#portfolio-section" class="js-trigger navbar-option-link">Portfolio</a>
                 </li>
-                <li id="navbar-option-3">
-                    <a href="#services-section" class="js-trigger navbar-option-link">Services</a>
+                <li id="navbar-option-3" class="top-nav" >
+                    <a href="" class="js-trigger navbar-option-link">Services </a>
+
+                    <ul class="dropdown">
+                      <a href="#"><li>Website Development</li></a>
+                      <a href="#"><li>Mobile App Development</li></a>
+                      <a href="#"><li>Desktop App Development</li></a>
+                      <a href="#"><li>Support Service</li></a> 
+                    </ul>
                 </li>
-                <li id="navbar-option-3">
+                <li id="navbar-option-4" class="top-nav">
                     <a href="#blog-section" class="js-trigger navbar-option-link">Blog</a>
                 </li>
-                <li id="navbar-option-5">
+                <li id="navbar-option-5" class="top-nav">
                     <a href="#contact-section" class="js-trigger navbar-option-link">Contact Us</a>
                 </li>
             </ul>
@@ -154,6 +162,9 @@
         <div class="any-section-body-text" data-aos="fade-right">
           <h5>Experience maximum growth in your business</h5>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, dolores totam! Eius delectus aspernatur nulla?</p>
+
+          <a href="#contact-section" class="js-trigger about-cta-button btn btn-outline-success btn-inverse" >Contact Us</a>
+          
         </div>
       </div>
 
@@ -207,67 +218,8 @@
       </div>
     </div>
 
-    <!-- Terminal Stackr Projects -->
-    <div id="portfolio-section" class="terminal-stackr-services-section bg-pr-1">
-      <div class="terminal-stackr-services-section-header">
-        <h2>Past Projects</h2>
-      </div>
-
-      <div class="terminal-stackr-services-section-card-container row">
-        <div class="bg-pr-2 terminal-stackr-services-card col-md-6 projects-card col-lg-4 col-sm-12 ">
-
-          <div class="projects-card-buttons">
-            <a class="btn btn-outline-success btn-inverse">View Project</a>
-          </div>
-
-          <div class="terminal-stackr-services-card-text-container ">
-            
-            <img src="./assets/about/construction.png" alt="Image of past projects" class="img-fluid">
-            
-          </div>
-        </div>
-        <div class="bg-pr-2 terminal-stackr-services-card col-md-6 projects-card col-lg-4 col-sm-12 ">
-
-          <div class="projects-card-buttons">
-            <a class="btn btn-outline-success btn-inverse">View Project</a>
-          </div>
-
-          <div class="terminal-stackr-services-card-text-container ">
-            
-            <img src="./assets/about/construction.png" alt="Image of past projects" class="img-fluid">
-            
-          </div>
-        </div>
-        <div class="bg-pr-2 terminal-stackr-services-card col-md-6 projects-card col-lg-4 col-sm-12 ">
-
-          <div class="projects-card-buttons">
-            <a class="btn btn-outline-success btn-inverse">View Project</a>
-          </div>
-
-          <div class="terminal-stackr-services-card-text-container ">
-            
-            <img src="./assets/about/construction.png" alt="Image of past projects" class="img-fluid">
-            
-          </div>
-        </div>
-        <div class="bg-pr-2 terminal-stackr-services-card col-md-6 projects-card col-lg-4 col-sm-12 ">
-
-          <div class="projects-card-buttons">
-            <a class="btn btn-outline-success btn-inverse">View Project</a>
-          </div>
-
-          <div class="terminal-stackr-services-card-text-container ">
-            
-            <img src="./assets/about/construction.png" alt="Image of past projects" class="img-fluid">
-            
-          </div>
-        </div>
-      </div>
-
-    </div>
-
     <!-- Education -->
-    <div class="terminal-stackr-about-section row bg-pr-2">
+    <div class="terminal-stackr-about-section row bg-pr-1">
       <div  class="any-section-image-container col-md-6 col-lg-6 col-sm-12" data-aos="fade-right">
         <img src="./assets/importance/visibility.png" alt="website construction image" class="img-fluid">
       </div>
@@ -278,24 +230,115 @@
 
         <ul class="any-section-body-text " >
           <h5 data-aos="fade-up" data-aos-duration="1000">Experience maximum growth in your business</h5>
-          <li class="row" data-aos="zoom-out-left" data-aos-duration="1000"> 
+          <li class="row" data-aos="zoom-out-up" data-aos-duration="1000"> 
             <img src="./assets/importance/circle-check.png" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing. 
           </li>
-          <li class="row" data-aos="zoom-out-left" data-aos-duration="1000"> 
+          <li class="row" data-aos="zoom-out-up" data-aos-duration="1000"> 
             <img src="./assets/importance/circle-check.png" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing. 
           </li>
-          <li class="row" data-aos="zoom-out-left" data-aos-duration="1000">
+          <li class="row" data-aos="zoom-out-up" data-aos-duration="1000">
             <img src="./assets/importance/circle-check.png" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.
           </li>
-          <li class="row" data-aos="zoom-out-left" data-aos-duration="1000"> 
+          <li class="row" data-aos="zoom-out-up" data-aos-duration="1000"> 
             <img src="./assets/importance/circle-check.png" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing. 
           </li>
-          <li class="row" data-aos="zoom-out-left" data-aos-duration="1000">
+          <li class="row" data-aos="zoom-out-up" data-aos-duration="1000">
             <img src="./assets/importance/circle-check.png" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing. 
           </li>
         </ul>
       </div>
     </div>
+
+    <!-- Terminal Stackr Projects -->
+    <div id="portfolio-section" class="terminal-stackr-services-section bg-pr-2">
+      <div class="terminal-stackr-services-section-header">
+        <h2>Past Projects</h2>
+      </div>
+
+      <div class="terminal-stackr-services-section-card-container row">
+
+        <div class=" bg-pr-1  terminal-stackr-services-card content col-md-6 projects-card col-lg-4 col-sm-12">  
+          <div class="front">
+            <img src="./assets/about/construction.png" alt="" class="img-fluid">
+          </div>
+          <div class="back">
+
+            <div class="card-text">
+              <h1>Photonet</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatem odio. Cumque, amet error?</p>
+              
+              <p><a href="#" class="btn btn-outline-success btn-inverse" >Preview</a></p>
+  
+            </div>
+          </div>
+        </div>
+        <div class=" bg-pr-1  terminal-stackr-services-card content col-md-6 projects-card col-lg-4 col-sm-12">  
+          <div class="front">
+            <img src="./assets/about/construction.png" alt="" class="img-fluid">
+          </div>
+          <div class="back">
+
+            <div class="card-text">
+              <h1>Photonet</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatem odio. Cumque, amet error?</p>
+              
+              <p><a href="#" class="btn btn-outline-success btn-inverse" >Preview</a></p>
+  
+            </div>
+          </div>
+        </div>
+        <div class=" bg-pr-1  terminal-stackr-services-card content col-md-6 projects-card col-lg-4 col-sm-12">  
+          <div class="front">
+            <img src="./assets/about/construction.png" alt="" class="img-fluid">
+          </div>
+          <div class="back">
+
+            <div class="card-text">
+              <h1>Photonet</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatem odio. Cumque, amet error?</p>
+              
+              <p><a href="#" class="btn btn-outline-success btn-inverse" >Preview</a></p>
+  
+            </div>
+          </div>
+        </div>
+        <div class=" bg-pr-1  terminal-stackr-services-card content col-md-6 projects-card col-lg-4 col-sm-12">  
+          <div class="front">
+            <img src="./assets/about/construction.png" alt="" class="img-fluid">
+          </div>
+          <div class="back">
+
+            <div class="card-text">
+              <h1>Photonet</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatem odio. Cumque, amet error?</p>
+              
+              <p><a href="#" class="btn btn-outline-success btn-inverse" >Preview</a></p>
+  
+            </div>
+          </div>
+        </div>
+        <div class=" bg-pr-1  terminal-stackr-services-card content col-md-6 projects-card col-lg-4 col-sm-12">  
+          <div class="front">
+            <img src="./assets/about/construction.png" alt="" class="img-fluid">
+          </div>
+          <div class="back">
+
+            <div class="card-text">
+              <h1>Photonet</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatem odio. Cumque, amet error?</p>
+              
+              <p><a href="#" class="btn btn-outline-success btn-inverse" >Preview</a></p>
+  
+            </div>
+          </div>
+        </div>
+        
+
+        
+      </div>
+
+    </div>
+
 
     <!-- Terminal Stackr Testimonials -->
     <div class=" terminal-stackr-services-section customer-feedback">
@@ -310,7 +353,7 @@
               <!-- slider item -->
               <div class="feedback-slider-item">
                 <img src="./assets/testimonial/profil-01.jpg" class="center-block img-circle" alt="Customer Feedback">
-                <h3 class="customer-name">Lisa Redfern</h3>
+                <h3 class="customer-name">Lisa Redfern  <p>CEO, ABC Logistics</p></h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
                 <span class="light-bg customer-rating" data-rating="5">
                   5
@@ -322,7 +365,7 @@
               <!-- slider item -->
               <div class="feedback-slider-item">
                 <img src="./assets/testimonial/profil-02.jpg" class="center-block img-circle" alt="Customer Feedback">
-                <h3 class="customer-name">Cassi</h3>
+                <h3 class="customer-name">Cassi <p>CTO, King Kong</p></h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
                 <span class="light-bg customer-rating" data-rating="4">
                   4
@@ -334,7 +377,7 @@
               <!-- slider item -->
               <div class="feedback-slider-item">
                 <img src="./assets/testimonial/profil-03.jpg" class="center-block img-circle" alt="Customer Feedback">
-                <h3 class="customer-name">Md Nahidul</h3>
+                <h3 class="customer-name">Ajulu Onyema <p>COO, ABITNet</p></h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
                 <span class="light-bg customer-rating" data-rating="5">
                   5
@@ -374,6 +417,34 @@
       </div><!-- /End container -->
     </div><!-- /End customer-feedback -->
 
+    <!-- The Team and Tell Us About Project -->
+    <div class="bg-pr-2 terminal-stackr-services-section customer-feedback">
+      <div class="terminal-stackr-services-section-header">
+        <h2>Meet Our Team</h2>
+      </div>
+
+      <div class="any-section-body-text terminal-stackr-team-info">
+        <h4>We understand how important it is to know who is designing your new wesite.</h4>
+        <br>
+        <h4>That is why Terminal Stackr warmly extend a free call session to businesses in Nigeria with our team.</h4>
+
+        <br>
+        <h4>Schedule a call or send a message and lets discuss about your business</h4>
+        <br>
+
+        <div class="cta-container">
+
+          <a href="#" class="whatsapp-number"  > <i class="fa fa-whatsapp"></i> +2349056144059 </a>
+          <a href="#" class="send-to-contact-page"   > <i class="fa fa-envelope"></i> Send Message</a>
+          
+        </div>
+      </div>
+
+      <div class="team-photograph">
+        <img src="./assets/team-photo/d3ed441c-5af5-4977-88ea-94e92486d718.png" alt="team photo" class="img-fluid">
+      </div>
+
+    </div>
   <!-- Contact Section -->
   <div id="contact-section" class="terminal-stackr-about-section  terminal-stackr-contact-section bg-pr-2 row">
     <div data-wow-duration="1s" class="any-section-image-container col-md-6 col-lg-6 col-sm-12">
@@ -484,10 +555,10 @@
         </p>
         <div class="footer-icons">
           
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-youtube"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#" onmouseover="this.style.backgroundColor='var(--facebook-color-1)'" onmouseout="this.style.backgroundColor='var(--footer-icon-color)'" ><i class="fa fa-facebook"></i></a>
+          <a href="#" onmouseover="this.style.backgroundColor='var(--youtube-color-1)'" onmouseout="this.style.backgroundColor='var(--footer-icon-color)'"><i class="fa fa-youtube"></i></a>
+          <a href="#" onmouseover="this.style.backgroundColor='var(--twitter-color-1)'" onmouseout="this.style.backgroundColor='var(--footer-icon-color)'"><i class="fa fa-twitter"></i></a>
+          <a href="#" onmouseover="this.style.backgroundColor='var(--instagram-color-1)'" onmouseout="this.style.backgroundColor='var(--footer-icon-color)'"><i class="fa fa-instagram"></i></a>
   
         </div>
   
@@ -523,6 +594,7 @@
     <script src="./vendor/intl-tel-input-master/build/js/intlTelInput.js"></script>
     <script src="./vendor/scrollspy-navigation/jquery.scrollspy.js"></script>
     <script src="./vendor/moveTo-master/dist/moveTo.min.js"></script>
+    <script src="./main.js"></script>
     <!-- Landing Page Script -->
     <script>
         
